@@ -1777,15 +1777,127 @@ library(DataComputing)
 <h3>Data Intake</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcbnN1bW1hcnkoU3RhcmJ1Y2tzKVxuZ2xpbXBzZShTdGFyYnVja3MpXG5WaWV3KFN0YXJidWNrcylcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcbmBgYCJ9 -->
 <pre class="r"><code>### Load the data set into our RStudio environment
 Starbucks &lt;- read.csv(&quot;StarbucksinCaliforniaCityStats.csv&quot;)
 
 #commands used to inspect the data set
-names(Starbucks)
-summary(Starbucks)
-glimpse(Starbucks)
-View(Starbucks)</code></pre>
+names(Starbucks)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIklEXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFsyXSBcIkNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFszXSBcIkNvdW50eVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs0XSBcIk51bWJlci5vZi5TdGFyYnVja3NcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50c1wiICAgICAgIFxuIFs2XSBcIlN0YXJidWNrcy5wZXIuMTAuc3EuLm1pbGVcIiAgICAgICAgICAgICAgIFxuIFs3XSBcIk1lZGlhbi5BZ2VcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs4XSBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lXCIgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDEwLlBvcHVsYXRpb25cIiAgICAgICAgICAgICAgICAgICAgICAgIFxuWzEwXSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvblwiICAgICAgICAgIFxuWzExXSBcIkxhbmQuQXJlYS4uU3EuLm1pbGVzLlwiICAgICAgICAgICAgICAgICAgIFxuWzEyXSBcIk51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuXCIgICAgICAgICAgICAgIFxuWzEzXSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cIlxuWzE0XSBcIlN0YXJidWNrcy5wZXIuc3EuLm1pbGUuLlJhbmsuXCIgICAgICAgICAgIFxuWzE1XSBcIk1lZGlhbi5BZ2UuLlJhbmsuXCIgICAgICAgICAgICAgICAgICAgICAgIFxuWzE2XSBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLlwiICAgICAgICAgIFxuWzE3XSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvbi4uUmFuay5cIiAgIFxuIn0= -->
+<pre><code> [1] &quot;ID&quot;                                      
+ [2] &quot;City&quot;                                    
+ [3] &quot;County&quot;                                  
+ [4] &quot;Number.of.Starbucks&quot;                     
+ [5] &quot;Starbucks.per.million.inhabitants&quot;       
+ [6] &quot;Starbucks.per.10.sq..mile&quot;               
+ [7] &quot;Median.Age&quot;                              
+ [8] &quot;Median.Household.Income&quot;                 
+ [9] &quot;X2010.Population&quot;                        
+[10] &quot;Percentage.of.white.population&quot;          
+[11] &quot;Land.Area..Sq..miles.&quot;                   
+[12] &quot;Number.of.Starbucks..Rank.&quot;              
+[13] &quot;Starbucks.per.million.inhabitants..Rank.&quot;
+[14] &quot;Starbucks.per.sq..mile..Rank.&quot;           
+[15] &quot;Median.Age..Rank.&quot;                       
+[16] &quot;Median.Household.Income..Rank.&quot;          
+[17] &quot;Percentage.of.white.population..Rank.&quot;   </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShTdGFyYnVja3MpXG5gYGAifQ== -->
+<pre class="r"><code>summary(Starbucks)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSUQgICAgICAgICAgICAgICAgQ2l0eSAgICBcbiBBZGVsYW50byAtIFNhbiBCZXJuYXJkaW5vIENvdW50eSA6ICAxICAgQWRlbGFudG8gICAgOiAgMSAgXG4gQWdvdXJhIEhpbGxzIC0gTG9zIEFuZ2VsZXMgQ291bnR5OiAgMSAgIEFnb3VyYSBIaWxsczogIDEgIFxuIEFsYW1lZGEgLSBBbGFtZWRhIENvdW50eSAgICAgICAgIDogIDEgICBBbGFtZWRhICAgICA6ICAxICBcbiBBbGFtbyAtIENvbnRyYSBDb3N0YSBDb3VudHkgICAgICA6ICAxICAgQWxhbW8gICAgICAgOiAgMSAgXG4gQWxiYW55IC0gQWxhbWVkYSBDb3VudHkgICAgICAgICAgOiAgMSAgIEFsYmFueSAgICAgIDogIDEgIFxuIEFsaGFtYnJhIC0gTG9zIEFuZ2VsZXMgQ291bnR5ICAgIDogIDEgICBBbGhhbWJyYSAgICA6ICAxICBcbiAoT3RoZXIpICAgICAgICAgICAgICAgICAgICAgICAgICA6NDI3ICAgKE90aGVyKSAgICAgOjQyNyAgXG4gICAgICAgICAgICAgICAgICAgQ291bnR5ICAgIE51bWJlci5vZi5TdGFyYnVja3NcbiBMb3MgQW5nZWxlcyBDb3VudHkgICA6IDgxICAgTWluLiAgIDogIDEuMDAwICAgIFxuIE9yYW5nZSBDb3VudHkgICAgICAgIDogMzMgICAxc3QgUXUuOiAgMS4wMDAgICAgXG4gUml2ZXJzaWRlIENvdW50eSAgICAgOiAyOCAgIE1lZGlhbiA6ICAzLjAwMCAgICBcbiBTYW4gRGllZ28gQ291bnR5ICAgICA6IDI0ICAgTWVhbiAgIDogIDUuOTA4ICAgIFxuIFNhbiBCZXJuYXJkaW5vIENvdW50eTogMjMgICAzcmQgUXUuOiAgNi4wMDAgICAgXG4gQ29udHJhIENvc3RhIENvdW50eSAgOiAyMiAgIE1heC4gICA6MjIxLjAwMCAgICBcbiAoT3RoZXIpICAgICAgICAgICAgICA6MjIyICAgICAgICAgICAgICAgICAgICAgIFxuIFN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cyBTdGFyYnVja3MucGVyLjEwLnNxLi5taWxlICAgTWVkaWFuLkFnZSBcbiA3MiAgICAgOiAgNyAgICAgICAgICAgICAgICAgICAgICAgMC45NiAgIDogIDQgICAgICAgICAgICAgICAzMi41ICAgOiAgNyAgXG4gODcgICAgIDogIDcgICAgICAgICAgICAgICAgICAgICAgIDQuMjcgICA6ICA0ICAgICAgICAgICAgICAgMzYuMiAgIDogIDcgIFxuIDEwNyAgICA6ICA2ICAgICAgICAgICAgICAgICAgICAgICAxLjE3ICAgOiAgMyAgICAgICAgICAgICAgIDM1LjYgICA6ICA2ICBcbiAxMTcgICAgOiAgNiAgICAgICAgICAgICAgICAgICAgICAgMS40NCAgIDogIDMgICAgICAgICAgICAgICAzNyAgICAgOiAgNiAgXG4gNDcgICAgIDogIDYgICAgICAgICAgICAgICAgICAgICAgIDEuODEgICA6ICAzICAgICAgICAgICAgICAgMzcuOSAgIDogIDYgIFxuIDQ0ICAgICA6ICA1ICAgICAgICAgICAgICAgICAgICAgICAyLjEyICAgOiAgMyAgICAgICAgICAgICAgIDI4LjYgICA6ICA1ICBcbiAoT3RoZXIpOjM5NiAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKTo0MTMgICAgICAgICAgICAgICAoT3RoZXIpOjM5NiAgXG4gIE1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lICAgICAgWDIwMTAuUG9wdWxhdGlvblxuICQ0NiwyNTAgICAgICA6ICAyICAgICAgICAxMTkyNiAgICAgICAgOiAgMiAgICBcbiAkNTgsNzA2ICAgICAgOiAgMiAgICAgICAgTm90IEF2YWlsYWJsZTogIDIgICAgXG4gJDYzLDc1MCAgICAgIDogIDIgICAgICAgIDEwMDA5NyAgICAgICA6ICAxICAgIFxuIE5vdCBBdmFpbGFibGU6ICAyICAgICAgICAxMDA4MCAgICAgICAgOiAgMSAgICBcbiAkMTAwLDM3MyAgICAgOiAgMSAgICAgICAgMTAxMTIzICAgICAgIDogIDEgICAgXG4gJDEwMCw0MTcgICAgIDogIDEgICAgICAgIDEwMjM0ICAgICAgICA6ICAxICAgIFxuIChPdGhlcikgICAgICA6NDIzICAgICAgICAoT3RoZXIpICAgICAgOjQyNSAgICBcbiBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24gTGFuZC5BcmVhLi5TcS4ubWlsZXMuXG4gNzUgICAgIDogMTQgICAgICAgICAgICAgICAgICAgIDExLjA4ICA6ICAzICAgICAgICAgIFxuIDg2ICAgICA6IDEzICAgICAgICAgICAgICAgICAgICA3LjkzICAgOiAgMyAgICAgICAgICBcbiA2MCAgICAgOiAxMiAgICAgICAgICAgICAgICAgICAgMS44NSAgIDogIDIgICAgICAgICAgXG4gNjUgICAgIDogMTIgICAgICAgICAgICAgICAgICAgIDEuOTEgICA6ICAyICAgICAgICAgIFxuIDcxICAgICA6IDEyICAgICAgICAgICAgICAgICAgICAxMi4xMyAgOiAgMiAgICAgICAgICBcbiA4NyAgICAgOiAxMiAgICAgICAgICAgICAgICAgICAgMTcuNzMgIDogIDIgICAgICAgICAgXG4gKE90aGVyKTozNTggICAgICAgICAgICAgICAgICAgIChPdGhlcik6NDE5ICAgICAgICAgIFxuIE51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuIFN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cbiBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gMXN0IFF1LjogIDEuMCAgICAgICAgICAgICAgMXN0IFF1LjoxMDguNSAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1lZGlhbiA6MTkwLjAgICAgICAgICAgICAgIE1lZGlhbiA6MjE2LjAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBNZWFuICAgOjE4OC4yICAgICAgICAgICAgICBNZWFuICAgOjIxNi4wICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gM3JkIFF1LjozMDkuMCAgICAgICAgICAgICAgM3JkIFF1LjozMjMuNSAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6NDMzLjAgICAgICAgICAgICAgIE1heC4gICA6NDMxLjAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gU3RhcmJ1Y2tzLnBlci5zcS4ubWlsZS4uUmFuay4gTWVkaWFuLkFnZS4uUmFuay5cbiBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICAgICBNaW4uICAgOiAgMSAgICAgIFxuIDFzdCBRdS46MTA4LjUgICAgICAgICAgICAgICAgIDFzdCBRdS46MTA3ICAgICAgXG4gTWVkaWFuIDoyMTYuMCAgICAgICAgICAgICAgICAgTWVkaWFuIDoyMTYgICAgICBcbiBNZWFuICAgOjIxNS45ICAgICAgICAgICAgICAgICBNZWFuICAgOjIxNSAgICAgIFxuIDNyZCBRdS46MzIzLjUgICAgICAgICAgICAgICAgIDNyZCBRdS46MzIyICAgICAgXG4gTWF4LiAgIDo0MzEuMCAgICAgICAgICAgICAgICAgTWF4LiAgIDo0MzEgICAgICBcbiBOQSdzICAgOjIgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjIgICAgICAgIFxuIE1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLiBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24uLlJhbmsuXG4gTWluLiAgIDogIDEuMCAgICAgICAgICAgICAgICAgIE1pbi4gICA6ICAxLjAgICAgICAgICAgICAgICAgICAgICAgICBcbiAxc3QgUXUuOjEwOC41ICAgICAgICAgICAgICAgICAgMXN0IFF1LjoxMDguNSAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1lZGlhbiA6MjE2LjAgICAgICAgICAgICAgICAgICBNZWRpYW4gOjIxNi4wICAgICAgICAgICAgICAgICAgICAgICAgXG4gTWVhbiAgIDoyMTYuMCAgICAgICAgICAgICAgICAgIE1lYW4gICA6MjE2LjAgICAgICAgICAgICAgICAgICAgICAgICBcbiAzcmQgUXUuOjMyMy41ICAgICAgICAgICAgICAgICAgM3JkIFF1LjozMjMuNSAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6NDMxLjAgICAgICAgICAgICAgICAgICBNYXguICAgOjQzMS4wICAgICAgICAgICAgICAgICAgICAgICAgXG4gTkEncyAgIDoyICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6MiAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>                                 ID                City    
+ Adelanto - San Bernardino County :  1   Adelanto    :  1  
+ Agoura Hills - Los Angeles County:  1   Agoura Hills:  1  
+ Alameda - Alameda County         :  1   Alameda     :  1  
+ Alamo - Contra Costa County      :  1   Alamo       :  1  
+ Albany - Alameda County          :  1   Albany      :  1  
+ Alhambra - Los Angeles County    :  1   Alhambra    :  1  
+ (Other)                          :427   (Other)     :427  
+                   County    Number.of.Starbucks
+ Los Angeles County   : 81   Min.   :  1.000    
+ Orange County        : 33   1st Qu.:  1.000    
+ Riverside County     : 28   Median :  3.000    
+ San Diego County     : 24   Mean   :  5.908    
+ San Bernardino County: 23   3rd Qu.:  6.000    
+ Contra Costa County  : 22   Max.   :221.000    
+ (Other)              :222                      
+ Starbucks.per.million.inhabitants Starbucks.per.10.sq..mile   Median.Age 
+ 72     :  7                       0.96   :  4               32.5   :  7  
+ 87     :  7                       4.27   :  4               36.2   :  7  
+ 107    :  6                       1.17   :  3               35.6   :  6  
+ 117    :  6                       1.44   :  3               37     :  6  
+ 47     :  6                       1.81   :  3               37.9   :  6  
+ 44     :  5                       2.12   :  3               28.6   :  5  
+ (Other):396                       (Other):413               (Other):396  
+  Median.Household.Income      X2010.Population
+ $46,250      :  2        11926        :  2    
+ $58,706      :  2        Not Available:  2    
+ $63,750      :  2        100097       :  1    
+ Not Available:  2        10080        :  1    
+ $100,373     :  1        101123       :  1    
+ $100,417     :  1        10234        :  1    
+ (Other)      :423        (Other)      :425    
+ Percentage.of.white.population Land.Area..Sq..miles.
+ 75     : 14                    11.08  :  3          
+ 86     : 13                    7.93   :  3          
+ 60     : 12                    1.85   :  2          
+ 65     : 12                    1.91   :  2          
+ 71     : 12                    12.13  :  2          
+ 87     : 12                    17.73  :  2          
+ (Other):358                    (Other):419          
+ Number.of.Starbucks..Rank. Starbucks.per.million.inhabitants..Rank.
+ Min.   :  1.0              Min.   :  1.0                           
+ 1st Qu.:  1.0              1st Qu.:108.5                           
+ Median :190.0              Median :216.0                           
+ Mean   :188.2              Mean   :216.0                           
+ 3rd Qu.:309.0              3rd Qu.:323.5                           
+ Max.   :433.0              Max.   :431.0                           
+                            NA's   :2                               
+ Starbucks.per.sq..mile..Rank. Median.Age..Rank.
+ Min.   :  1.0                 Min.   :  1      
+ 1st Qu.:108.5                 1st Qu.:107      
+ Median :216.0                 Median :216      
+ Mean   :215.9                 Mean   :215      
+ 3rd Qu.:323.5                 3rd Qu.:322      
+ Max.   :431.0                 Max.   :431      
+ NA's   :2                     NA's   :2        
+ Median.Household.Income..Rank. Percentage.of.white.population..Rank.
+ Min.   :  1.0                  Min.   :  1.0                        
+ 1st Qu.:108.5                  1st Qu.:108.5                        
+ Median :216.0                  Median :216.0                        
+ Mean   :216.0                  Mean   :216.0                        
+ 3rd Qu.:323.5                  3rd Qu.:323.5                        
+ Max.   :431.0                  Max.   :431.0                        
+ NA's   :2                      NA's   :2                            </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2xpbXBzZShTdGFyYnVja3MpXG5gYGAifQ== -->
+<pre class="r"><code>glimpse(Starbucks)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiA0MzNcblZhcmlhYmxlczogMTdcbiQgSUQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBNb250ZXJleSBQYXJrIC0gTG9zIEFuZ2XigKZcbiQgQ2l0eSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBNb250ZXJleSBQYXJrLCBNaWxwaXRhcyzigKZcbiQgQ291bnR5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBMb3MgQW5nZWxlcyBDb3VudHksIFNhbnTigKZcbiQgTnVtYmVyLm9mLlN0YXJidWNrcyAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGludD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxLCAxMCwgMywgMiwgNCwgMywgMywgNSzigKZcbiQgU3RhcmJ1Y2tzLnBlci5taWxsaW9uLmluaGFiaXRhbnRzICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxNywgMTUwLCA1NiwgODMsIDgyLCAyNyzigKZcbiQgU3RhcmJ1Y2tzLnBlci4xMC5zcS4ubWlsZSAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxLjMwLCA3LjM2LCA1LjgxLCAzLjIyLCDigKZcbiQgTWVkaWFuLkFnZSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSA0My4xLCAzNi4xLCAzOC4xLCAzOSwgNDTigKZcbiQgTWVkaWFuLkhvdXNlaG9sZC5JbmNvbWUgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBcIiQ1MSw3MzZcIiwgXCIkOTQsNTg5XCIsIFwiJOKAplxuJCBYMjAxMC5Qb3B1bGF0aW9uICAgICAgICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDYwMjY5LCA2Njc5MCwgNTM3NjQsIDI0MOKAplxuJCBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24gICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDE5LCAyMSwgMjEsIDIyLCAyMywgMjMsIOKAplxuJCBMYW5kLkFyZWEuLlNxLi5taWxlcy4gICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDcuNjcsIDEzLjU5LCA1LjE2LCA2LjIxLOKAplxuJCBOdW1iZXIub2YuU3RhcmJ1Y2tzLi5SYW5rLiAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDM3NiwgMTkwLCAxMTMsIDI0NywgMeKAplxuJCBTdGFyYnVja3MucGVyLm1pbGxpb24uaW5oYWJpdGFudHMuLlJhbmsuIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDMzNCwgOTYsIDE4MywgMTc3LCAxNeKAplxuJCBTdGFyYnVja3MucGVyLnNxLi5taWxlLi5SYW5rLiAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDY4LCAzODAsIDM1MCwgMjEwLCAzMDQsIOKAplxuJCBNZWRpYW4uQWdlLi5SYW5rLiAgICAgICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDM2NCwgMjA1LCAyNTgsIDI3NywgMzc0LOKAplxuJCBNZWRpYW4uSG91c2Vob2xkLkluY29tZS4uUmFuay4gICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEyNSwgMzc0LCA5MywgMzczLCAzNTgsIOKAplxuJCBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24uLlJhbmsuICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDIsIDMsIDQsIDUsIDYsIDcsIDgsIOKAplxuIn0= -->
+<pre><code>Observations: 433
+Variables: 17
+$ ID                                       [3m[38;5;246m&lt;fct&gt;[39m[23m Monterey Park - Los Ange…
+$ City                                     [3m[38;5;246m&lt;fct&gt;[39m[23m Monterey Park, Milpitas,…
+$ County                                   [3m[38;5;246m&lt;fct&gt;[39m[23m Los Angeles County, Sant…
+$ Number.of.Starbucks                      [3m[38;5;246m&lt;int&gt;[39m[23m 1, 10, 3, 2, 4, 3, 3, 5,…
+$ Starbucks.per.million.inhabitants        [3m[38;5;246m&lt;fct&gt;[39m[23m 17, 150, 56, 83, 82, 27,…
+$ Starbucks.per.10.sq..mile                [3m[38;5;246m&lt;fct&gt;[39m[23m 1.30, 7.36, 5.81, 3.22, …
+$ Median.Age                               [3m[38;5;246m&lt;fct&gt;[39m[23m 43.1, 36.1, 38.1, 39, 44…
+$ Median.Household.Income                  [3m[38;5;246m&lt;fct&gt;[39m[23m &quot;$51,736&quot;, &quot;$94,589&quot;, &quot;$…
+$ X2010.Population                         [3m[38;5;246m&lt;fct&gt;[39m[23m 60269, 66790, 53764, 240…
+$ Percentage.of.white.population           [3m[38;5;246m&lt;fct&gt;[39m[23m 19, 21, 21, 22, 23, 23, …
+$ Land.Area..Sq..miles.                    [3m[38;5;246m&lt;fct&gt;[39m[23m 7.67, 13.59, 5.16, 6.21,…
+$ Number.of.Starbucks..Rank.               [3m[38;5;246m&lt;int&gt;[39m[23m 1, 376, 190, 113, 247, 1…
+$ Starbucks.per.million.inhabitants..Rank. [3m[38;5;246m&lt;int&gt;[39m[23m 1, 334, 96, 183, 177, 15…
+$ Starbucks.per.sq..mile..Rank.            [3m[38;5;246m&lt;int&gt;[39m[23m 68, 380, 350, 210, 304, …
+$ Median.Age..Rank.                        [3m[38;5;246m&lt;int&gt;[39m[23m 364, 205, 258, 277, 374,…
+$ Median.Household.Income..Rank.           [3m[38;5;246m&lt;int&gt;[39m[23m 125, 374, 93, 373, 358, …
+$ Percentage.of.white.population..Rank.    [3m[38;5;246m&lt;int&gt;[39m[23m 1, 2, 3, 4, 5, 6, 7, 8, …</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhTdGFyYnVja3MpXG5gYGAifQ== -->
+<pre class="r"><code>View(Starbucks)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 </div>
