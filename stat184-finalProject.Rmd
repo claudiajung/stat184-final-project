@@ -48,7 +48,7 @@ Factors that we are interested:
 
 - Median Income
 
-- Percentage
+- Percentage of White population
 
 - Location
 
