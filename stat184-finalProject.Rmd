@@ -79,3 +79,18 @@ is.numeric(Starbucks$Median.Household.Income)
 Starbucks %>%
   ggplot(aes(x=Median.Household.Income, y=Number.of.Starbucks)) + geom_point() + ylim(0,50)
 ```
+
+### Analysis- White Population
+```{r}
+#Some of the variables provided wasn't numerical variable, needed to be converted
+Starbucks$Percentage.of.white.population <- as.numeric(as.character(Starbucks$Percentage.of.white.population))
+View(Starbucks)
+#Checking if it's successfully converted
+is.numeric(Starbucks$Percentage.of.white.population)
+#Plotting number of Starbucks vs Percentage of White Population
+Starbucks %>%
+  ggplot(aes(x=Percentage.of.white.population, y=Number.of.Starbucks)) + geom_point() +ylim(0,50)
+
+```
+
+
