@@ -60,4 +60,7 @@ Starbucks$Median.Age <- as.numeric(as.character(Starbucks$Median.Age))
 View(Starbucks)
 #Checking if it's successfully converted
 is.numeric(Starbucks$Median.Age)
+#Plotting number of Starbucks vs Age
+Starbucks %>%
+  ggplot(aes(x=Median.Age, y=Number.of.Starbucks)) + geom_point() + ylim(0,50)
 ```
