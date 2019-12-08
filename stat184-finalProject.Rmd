@@ -112,3 +112,5 @@ JointTable %>%
   ggplot(aes(x=Population, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50)
 ```
 
+* divide into income groups (low, middle, high)
+* calculate percentage of starbucks in those income groups.
