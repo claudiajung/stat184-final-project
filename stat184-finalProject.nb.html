@@ -1760,120 +1760,16 @@ summary {
 <h3>Clean up environment and load packages</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCBcbnJtKGxpc3QgPSBscygpKVxuXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWRcbmxpYnJhcnkobW9zYWljKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCBcbnJtKGxpc3QgPSBscygpKVxuXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWRcbmxpYnJhcnkobW9zYWljKVxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGx1YnJpZGF0ZSlcbmxpYnJhcnkoRGF0YUNvbXB1dGluZylcbmxpYnJhcnkoZ2dwbG90MilcbmBgYCJ9 -->
 <pre class="r"><code># clean up the RStudio environment 
 rm(list = ls())
 
 # load all packages here: `mosaic`, `tidyverse`, `lubridate`, and all others used
-library(mosaic)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBkcGx5clxuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2RwbHlyJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tXG4gIHByaW50LnJvd3dpc2VfZGYgICAgIFxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGxhdHRpY2VcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dmb3JtdWxhXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGdncGxvdDJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dzdGFuY2VcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmGdnc3RhbmNl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgZ2VvbV9lcnJvcmJhcmgsIEdlb21FcnJvcmJhcmhcblxuXG5OZXcgdG8gZ2dmb3JtdWxhPyAgVHJ5IHRoZSB0dXRvcmlhbHM6IFxuXHRsZWFybnI6OnJ1bl90dXRvcmlhbChcImludHJvZHVjdGlvblwiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcblx0bGVhcm5yOjpydW5fdHV0b3JpYWwoXCJyZWZpbmluZ1wiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogbW9zYWljRGF0YVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBNYXRyaXhcblJlZ2lzdGVyZWQgUzMgbWV0aG9kcyBvdmVyd3JpdHRlbiBieSAnaHRtbHRvb2xzJzpcbiAgbWV0aG9kICAgICAgICAgICAgICAgZnJvbSAgICAgICAgIFxuICBwcmludC5odG1sICAgICAgICAgICB0b29sczpyc3R1ZGlvXG4gIHByaW50LnNoaW55LnRhZyAgICAgIHRvb2xzOnJzdHVkaW9cbiAgcHJpbnQuc2hpbnkudGFnLmxpc3QgdG9vbHM6cnN0dWRpb1xuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2h0bWx3aWRnZXRzJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWx3aWRnZXQgdG9vbHM6cnN0dWRpb1xuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ21vc2FpYyc6XG4gIG1ldGhvZCAgICAgICAgICAgICAgICAgICAgICAgICAgIGZyb20gICBcbiAgZm9ydGlmeS5TcGF0aWFsUG9seWdvbnNEYXRhRnJhbWUgZ2dwbG90MlxuXG5UaGUgJ21vc2FpYycgcGFja2FnZSBtYXNrcyBzZXZlcmFsIGZ1bmN0aW9ucyBmcm9tIGNvcmUgcGFja2FnZXMgaW4gb3JkZXIgdG8gYWRkIFxuYWRkaXRpb25hbCBmZWF0dXJlcy4gIFRoZSBvcmlnaW5hbCBiZWhhdmlvciBvZiB0aGVzZSBmdW5jdGlvbnMgc2hvdWxkIG5vdCBiZSBhZmZlY3RlZCBieSB0aGlzLlxuXG5Ob3RlOiBJZiB5b3UgdXNlIHRoZSBNYXRyaXggcGFja2FnZSwgYmUgc3VyZSB0byBsb2FkIGl0IEJFRk9SRSBsb2FkaW5nIG1vc2FpYy5cblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmG1vc2FpY+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOk1hdHJpeOKAmTpcblxuICAgIG1lYW5cblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgc3RhdFxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6ZHBseXLigJk6XG5cbiAgICBjb3VudCwgZG8sIHRhbGx5XG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpzdGF0c+KAmTpcblxuICAgIGJpbm9tLnRlc3QsIGNvciwgY29yLnRlc3QsIGNvdiwgZml2ZW51bSwgSVFSLCBtZWRpYW4sIHByb3AudGVzdCwgcXVhbnRpbGUsIHNkLFxuICAgIHQudGVzdCwgdmFyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgbWF4LCBtZWFuLCBtaW4sIHByb2QsIHJhbmdlLCBzYW1wbGUsIHN1bVxuIn0= -->
-<pre><code>Loading required package: dplyr
-Registered S3 method overwritten by 'dplyr':
-  method           from
-  print.rowwise_df     
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Loading required package: lattice
-Loading required package: ggformula
-Loading required package: ggplot2
-Loading required package: ggstance
-
-Attaching package: ‘ggstance’
-
-The following objects are masked from ‘package:ggplot2’:
-
-    geom_errorbarh, GeomErrorbarh
-
-
-New to ggformula?  Try the tutorials: 
-    learnr::run_tutorial(&quot;introduction&quot;, package = &quot;ggformula&quot;)
-    learnr::run_tutorial(&quot;refining&quot;, package = &quot;ggformula&quot;)
-Loading required package: mosaicData
-Loading required package: Matrix
-Registered S3 methods overwritten by 'htmltools':
-  method               from         
-  print.html           tools:rstudio
-  print.shiny.tag      tools:rstudio
-  print.shiny.tag.list tools:rstudio
-Registered S3 method overwritten by 'htmlwidgets':
-  method           from         
-  print.htmlwidget tools:rstudio
-Registered S3 method overwritten by 'mosaic':
-  method                           from   
-  fortify.SpatialPolygonsDataFrame ggplot2
-
-The 'mosaic' package masks several functions from core packages in order to add 
-additional features.  The original behavior of these functions should not be affected by this.
-
-Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
-
-Attaching package: ‘mosaic’
-
-The following object is masked from ‘package:Matrix’:
-
-    mean
-
-The following object is masked from ‘package:ggplot2’:
-
-    stat
-
-The following objects are masked from ‘package:dplyr’:
-
-    count, do, tally
-
-The following objects are masked from ‘package:stats’:
-
-    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test, quantile, sd,
-    t.test, var
-
-The following objects are masked from ‘package:base’:
-
-    max, mean, min, prod, range, sample, sum</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXHUwMDFiWzMwbeKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4yLjEg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzMwbVx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG10aWJibGUgXHUwMDFiWzMwbSAyLjEuMyAgICAgXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzBtIDAuMy4yXG5cdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXIgIFx1MDAxYlszMG0gMS4wLjAgICAgIFx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG1zdHJpbmdyXHUwMDFiWzMwbSAxLjQuMFxuXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXJlYWRyICBcdTAwMWJbMzBtIDEuMy4xICAgICBcdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtZm9yY2F0c1x1MDAxYlszMG0gMC40LjBcdTAwMWJbMzltXG5cdTAwMWJbMzBt4pSA4pSAIFx1MDAxYlsxbUNvbmZsaWN0c1x1MDAxYlsyMm0g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZV9jb25mbGljdHMoKSDilIDilIBcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY291bnQoKVx1MDAxYlszMG0gICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpjb3VudCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtcHVycnJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY3Jvc3MoKVx1MDAxYlszMG0gICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06OmNyb3NzKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZG8oKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpkbygpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZXhwYW5kKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bU1hdHJpeFx1MDAxYlszMG06OmV4cGFuZCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZmlsdGVyKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzMwbTo6ZmlsdGVyKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1nZ3N0YW5jZVx1MDAxYlszMG06Olx1MDAxYlszMm1nZW9tX2Vycm9yYmFyaCgpXHUwMDFiWzMwbSBtYXNrcyBcdTAwMWJbMzRtZ2dwbG90Mlx1MDAxYlszMG06Omdlb21fZXJyb3JiYXJoKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtc3RhdHNcdTAwMWJbMzBtOjpsYWcoKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bXRpZHlyXHUwMDFiWzMwbTo6XHUwMDFiWzMybXBhY2soKVx1MDAxYlszMG0gICAgICAgICAgICAgIG1hc2tzIFx1MDAxYlszNG1NYXRyaXhcdTAwMWJbMzBtOjpwYWNrKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtc3RhdCgpXHUwMDFiWzMwbSAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZ2dwbG90Mlx1MDAxYlszMG06OnN0YXQoKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06Olx1MDAxYlszMm10YWxseSgpXHUwMDFiWzMwbSAgICAgICAgICAgIG1hc2tzIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06OnRhbGx5KClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG10aWR5clx1MDAxYlszMG06Olx1MDAxYlszMm11bnBhY2soKVx1MDAxYlszMG0gICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtTWF0cml4XHUwMDFiWzMwbTo6dW5wYWNrKClcdTAwMWJbMzltXG4ifQ== -->
-<pre><code>[30m── [1mAttaching packages[22m ───────────────────────────────────────────────────── tidyverse 1.2.1 ──[39m
-[30m[32m✔[30m [34mtibble [30m 2.1.3     [32m✔[30m [34mpurrr  [30m 0.3.2
-[32m✔[30m [34mtidyr  [30m 1.0.0     [32m✔[30m [34mstringr[30m 1.4.0
-[32m✔[30m [34mreadr  [30m 1.3.1     [32m✔[30m [34mforcats[30m 0.4.0[39m
-[30m── [1mConflicts[22m ──────────────────────────────────────────────────────── tidyverse_conflicts() ──
-[31m✖[30m [34mmosaic[30m::[32mcount()[30m            masks [34mdplyr[30m::count()
-[31m✖[30m [34mpurrr[30m::[32mcross()[30m             masks [34mmosaic[30m::cross()
-[31m✖[30m [34mmosaic[30m::[32mdo()[30m               masks [34mdplyr[30m::do()
-[31m✖[30m [34mtidyr[30m::[32mexpand()[30m            masks [34mMatrix[30m::expand()
-[31m✖[30m [34mdplyr[30m::[32mfilter()[30m            masks [34mstats[30m::filter()
-[31m✖[30m [34mggstance[30m::[32mgeom_errorbarh()[30m masks [34mggplot2[30m::geom_errorbarh()
-[31m✖[30m [34mdplyr[30m::[32mlag()[30m               masks [34mstats[30m::lag()
-[31m✖[30m [34mtidyr[30m::[32mpack()[30m              masks [34mMatrix[30m::pack()
-[31m✖[30m [34mmosaic[30m::[32mstat()[30m             masks [34mggplot2[30m::stat()
-[31m✖[30m [34mmosaic[30m::[32mtally()[30m            masks [34mdplyr[30m::tally()
-[31m✖[30m [34mtidyr[30m::[32munpack()[30m            masks [34mMatrix[30m::unpack()[39m</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
-<pre class="r"><code>library(lubridate)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
-<pre><code>
-Attaching package: ‘lubridate’
-
-The following object is masked from ‘package:base’:
-
-    date</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShEYXRhQ29tcHV0aW5nKVxuYGBgIn0= -->
-<pre class="r"><code>library(DataComputing)</code></pre>
+library(mosaic)
+library(tidyverse)
+library(lubridate)
+library(DataComputing)
+library(ggplot2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1882,13 +1778,26 @@ The following object is masked from ‘package:base’:
 <h3>Data Intake</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcblZpZXcoU3RhcmJ1Y2tzKVxuXG4jYWRkaW5nIHRoZSBTdGF0ZSBjb2x1bW5cblN0YXJidWNrcyA8LVxuICBTdGFyYnVja3MgJT4lXG4gIG11dGF0ZShTdGF0ZT1cIkNhbGlmb3JuaWFcIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcbmBgYCJ9 -->
 <pre class="r"><code>### Load the data set into our RStudio environment
 Starbucks &lt;- read.csv(&quot;StarbucksinCaliforniaCityStats.csv&quot;)
 
 #commands used to inspect the data set
-names(Starbucks)
-View(Starbucks)
+names(Starbucks)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIklEXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIkNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFszXSBcIkNvdW50eVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3NcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50c1wiICAgICAgICBcIlN0YXJidWNrcy5wZXIuMTAuc3EuLm1pbGVcIiAgICAgICAgICAgICAgIFxuIFs3XSBcIk1lZGlhbi5BZ2VcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lXCIgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDEwLlBvcHVsYXRpb25cIiAgICAgICAgICAgICAgICAgICAgICAgICBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvblwiICAgICAgICAgIFxuWzExXSBcIkxhbmQuQXJlYS4uU3EuLm1pbGVzLlwiICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuXCIgICAgICAgICAgICAgIFxuWzEzXSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cIiBcIlN0YXJidWNrcy5wZXIuc3EuLm1pbGUuLlJhbmsuXCIgICAgICAgICAgIFxuWzE1XSBcIk1lZGlhbi5BZ2UuLlJhbmsuXCIgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLlwiICAgICAgICAgIFxuWzE3XSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvbi4uUmFuay5cIiAgIFxuIn0= -->
+<pre><code> [1] &quot;ID&quot;                                       &quot;City&quot;                                    
+ [3] &quot;County&quot;                                   &quot;Number.of.Starbucks&quot;                     
+ [5] &quot;Starbucks.per.million.inhabitants&quot;        &quot;Starbucks.per.10.sq..mile&quot;               
+ [7] &quot;Median.Age&quot;                               &quot;Median.Household.Income&quot;                 
+ [9] &quot;X2010.Population&quot;                         &quot;Percentage.of.white.population&quot;          
+[11] &quot;Land.Area..Sq..miles.&quot;                    &quot;Number.of.Starbucks..Rank.&quot;              
+[13] &quot;Starbucks.per.million.inhabitants..Rank.&quot; &quot;Starbucks.per.sq..mile..Rank.&quot;           
+[15] &quot;Median.Age..Rank.&quot;                        &quot;Median.Household.Income..Rank.&quot;          
+[17] &quot;Percentage.of.white.population..Rank.&quot;   </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhTdGFyYnVja3MpXG5cbiNhZGRpbmcgdGhlIFN0YXRlIGNvbHVtblxuU3RhcmJ1Y2tzIDwtXG4gIFN0YXJidWNrcyAlPiVcbiAgbXV0YXRlKFN0YXRlPVwiQ2FsaWZvcm5pYVwiKVxuYGBgIn0= -->
+<pre class="r"><code>View(Starbucks)
 
 #adding the State column
 Starbucks &lt;-
@@ -1900,12 +1809,33 @@ Starbucks &lt;-
 </div>
 <div id="research-question" class="section level3">
 <h3>Research Question</h3>
-<p>Is there a relationship between number of Starbucks and demographic characteristics of a city? * Factors that we are interested: <em>- Age </em>- Median Income <em>- Percentage </em>- Location</p>
+<div id="is-there-a-relationship-between-number-of-starbucks-and-demographic-characteristics-of-a-city" class="section level4">
+<h4>Is there a relationship between number of Starbucks and demographic characteristics of a city?</h4>
+<p>Factors that we are interested:</p>
+<ul>
+<li><p>Age</p></li>
+<li><p>Median Income</p></li>
+<li><p>Percentage</p></li>
+<li><p>Location</p></li>
+</ul>
+</div>
+</div>
+<div id="analysis" class="section level3">
+<h3>Analysis</h3>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXMubnVtZXJpYyhTdGFyYnVja3MkTWVkaWFuLkFnZSlcblxuYGBgIn0= -->
+<pre class="r"><code>is.numeric(Starbucks$Median.Age)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpgYGAKCiMjIyBEYXRhIEludGFrZQoKYGBge3J9CiMjIyBMb2FkIHRoZSBkYXRhIHNldCBpbnRvIG91ciBSU3R1ZGlvIGVudmlyb25tZW50ClN0YXJidWNrcyA8LSByZWFkLmNzdigiU3RhcmJ1Y2tzaW5DYWxpZm9ybmlhQ2l0eVN0YXRzLmNzdiIpCgojY29tbWFuZHMgdXNlZCB0byBpbnNwZWN0IHRoZSBkYXRhIHNldApuYW1lcyhTdGFyYnVja3MpClZpZXcoU3RhcmJ1Y2tzKQoKI2FkZGluZyB0aGUgU3RhdGUgY29sdW1uClN0YXJidWNrcyA8LQogIFN0YXJidWNrcyAlPiUKICBtdXRhdGUoU3RhdGU9IkNhbGlmb3JuaWEiKQpgYGAKCiMjIyBSZXNlYXJjaCBRdWVzdGlvbgpJcyB0aGVyZSBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIG51bWJlciBvZiBTdGFyYnVja3MgYW5kIGRlbW9ncmFwaGljIGNoYXJhY3RlcmlzdGljcyBvZiBhIGNpdHk/CiogRmFjdG9ycyB0aGF0IHdlIGFyZSBpbnRlcmVzdGVkOgoqLSBBZ2UKKi0gTWVkaWFuIEluY29tZQoqLSBQZXJjZW50YWdlCiotIExvY2F0aW9u</div>
+<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpsaWJyYXJ5KGdncGxvdDIpCmBgYAoKIyMjIERhdGEgSW50YWtlCgpgYGB7cn0KIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnQKU3RhcmJ1Y2tzIDwtIHJlYWQuY3N2KCJTdGFyYnVja3NpbkNhbGlmb3JuaWFDaXR5U3RhdHMuY3N2IikKCiNjb21tYW5kcyB1c2VkIHRvIGluc3BlY3QgdGhlIGRhdGEgc2V0Cm5hbWVzKFN0YXJidWNrcykKVmlldyhTdGFyYnVja3MpCgojYWRkaW5nIHRoZSBTdGF0ZSBjb2x1bW4KU3RhcmJ1Y2tzIDwtCiAgU3RhcmJ1Y2tzICU+JQogIG11dGF0ZShTdGF0ZT0iQ2FsaWZvcm5pYSIpCmBgYAoKIyMjIFJlc2VhcmNoIFF1ZXN0aW9uCgojIyMjIElzIHRoZXJlIGEgcmVsYXRpb25zaGlwIGJldHdlZW4gbnVtYmVyIG9mIFN0YXJidWNrcyBhbmQgZGVtb2dyYXBoaWMgY2hhcmFjdGVyaXN0aWNzIG9mIGEgY2l0eT8KCkZhY3RvcnMgdGhhdCB3ZSBhcmUgaW50ZXJlc3RlZDoKCi0gQWdlCgotIE1lZGlhbiBJbmNvbWUKCi0gUGVyY2VudGFnZQoKLSBMb2NhdGlvbgoKIyMjIEFuYWx5c2lzCgpgYGB7cn0KI1NvbWUgb2YgdGhlIHZhcmlhYmxlcyBwcm92aWRlZCB3YXNuJ3QgbnVtZXJpY2FsIHZhcmlhYmxlLCBuZWVkZWQgdG8gYmUgY29udmVydGVkClN0YXJidWNrcyRNZWRpYW4uQWdlIDwtIGFzLm51bWVyaWMoYXMuY2hhcmFjdGVyKFN0YXJidWNrcyRNZWRpYW4uQWdlKSkKVmlldyhTdGFyYnVja3MpCiNDaGVja2luZyBpZiBpdCdzIHN1Y2Nlc3NmdWxseSBjb252ZXJ0ZWQKaXMubnVtZXJpYyhTdGFyYnVja3MkTWVkaWFuLkFnZSkKYGBg</div>
 
 
 

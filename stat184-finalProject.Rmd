@@ -19,6 +19,7 @@ library(mosaic)
 library(tidyverse)
 library(lubridate)
 library(DataComputing)
+library(ggplot2)
 ```
 
 ### Data Intake
@@ -38,7 +39,8 @@ Starbucks <-
 ```
 
 ### Research Question
-Is there a relationship between number of Starbucks and demographic characteristics of a city?
+
+#### Is there a relationship between number of Starbucks and demographic characteristics of a city?
 
 Factors that we are interested:
 
@@ -49,3 +51,13 @@ Factors that we are interested:
 - Percentage
 
 - Location
+
+### Analysis
+
+```{r}
+#Some of the variables provided wasn't numerical variable, needed to be converted
+Starbucks$Median.Age <- as.numeric(as.character(Starbucks$Median.Age))
+View(Starbucks)
+#Checking if it's successfully converted
+is.numeric(Starbucks$Median.Age)
+```
