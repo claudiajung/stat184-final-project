@@ -78,6 +78,8 @@ View(Starbucks)
 is.numeric(Starbucks$Median.Household.Income)
 Starbucks %>%
   ggplot(aes(x=Median.Household.Income, y=Number.of.Starbucks)) + geom_point() + ylim(0,50)
+
+
 ```
 
 ### Analysis- White Population
@@ -90,7 +92,23 @@ is.numeric(Starbucks$Percentage.of.white.population)
 #Plotting number of Starbucks vs Percentage of White Population
 Starbucks %>%
   ggplot(aes(x=Percentage.of.white.population, y=Number.of.Starbucks)) + geom_point() +ylim(0,50)
-
 ```
 
+Top 10
+```{r}
+Starbucks %>%
+  arrange(-Number.of.Starbucks) %>%
+  select(City, Number.of.Starbucks, Median.Age, Median.Household.Income, Percentage.of.white.population) %>%
+  head(10)
+
+data("ZipGeography")
+View(ZipGeography)
+
+JointTable <-
+  Starbucks %>%
+  inner_join(ZipGeography, by=c("City"="CityName", "State"="State"))
+
+JointTable %>%
+  ggplot(aes(x=Population, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50)
+```
 
