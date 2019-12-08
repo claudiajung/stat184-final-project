@@ -52,7 +52,7 @@ Factors that we are interested:
 
 - Location
 
-### Analysis
+### Analysis- Age
 
 ```{r}
 #Some of the variables provided wasn't numerical variable, needed to be converted
@@ -63,4 +63,19 @@ is.numeric(Starbucks$Median.Age)
 #Plotting number of Starbucks vs Age
 Starbucks %>%
   ggplot(aes(x=Median.Age, y=Number.of.Starbucks)) + geom_point() + ylim(0,50)
+```
+### Analysis- Median Income
+```{r}
+#Some of the variables provided wasn't numerical variable, needed to be converted
+#Getting rid of $ and ,
+Starbucks <-
+  Starbucks %>%
+  mutate(Median.Household.Income=gsub(pattern = "[$,]", replacement = "", Median.Household.Income))
+#converting it into numerical variable
+Starbucks$Median.Household.Income <- as.numeric(as.character(Starbucks$Median.Household.Income))
+View(Starbucks)
+#Checking if it's successfully converted
+is.numeric(Starbucks$Median.Household.Income)
+Starbucks %>%
+  ggplot(aes(x=Median.Household.Income, y=Number.of.Starbucks)) + geom_point() + ylim(0,50)
 ```
