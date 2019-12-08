@@ -1882,37 +1882,30 @@ The following object is masked from ‘package:base’:
 <h3>Data Intake</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnRcblN0YXJidWNrcyA8LSByZWFkLmNzdihcIlN0YXJidWNrc2luQ2FsaWZvcm5pYUNpdHlTdGF0cy5jc3ZcIilcblxuI2NvbW1hbmRzIHVzZWQgdG8gaW5zcGVjdCB0aGUgZGF0YSBzZXRcbm5hbWVzKFN0YXJidWNrcylcblZpZXcoU3RhcmJ1Y2tzKVxuXG4jYWRkaW5nIHRoZSBTdGF0ZSBjb2x1bW5cblN0YXJidWNrcyA8LVxuICBTdGFyYnVja3MgJT4lXG4gIG11dGF0ZShTdGF0ZT1cIkNhbGlmb3JuaWFcIilcbmBgYCJ9 -->
 <pre class="r"><code>### Load the data set into our RStudio environment
 Starbucks &lt;- read.csv(&quot;StarbucksinCaliforniaCityStats.csv&quot;)
 
 #commands used to inspect the data set
-names(Starbucks)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIklEXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIkNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFszXSBcIkNvdW50eVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3NcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50c1wiICAgICAgICBcIlN0YXJidWNrcy5wZXIuMTAuc3EuLm1pbGVcIiAgICAgICAgICAgICAgIFxuIFs3XSBcIk1lZGlhbi5BZ2VcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lXCIgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDEwLlBvcHVsYXRpb25cIiAgICAgICAgICAgICAgICAgICAgICAgICBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvblwiICAgICAgICAgIFxuWzExXSBcIkxhbmQuQXJlYS4uU3EuLm1pbGVzLlwiICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuXCIgICAgICAgICAgICAgIFxuWzEzXSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cIiBcIlN0YXJidWNrcy5wZXIuc3EuLm1pbGUuLlJhbmsuXCIgICAgICAgICAgIFxuWzE1XSBcIk1lZGlhbi5BZ2UuLlJhbmsuXCIgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLlwiICAgICAgICAgIFxuWzE3XSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvbi4uUmFuay5cIiAgIFxuIn0= -->
-<pre><code> [1] &quot;ID&quot;                                       &quot;City&quot;                                    
- [3] &quot;County&quot;                                   &quot;Number.of.Starbucks&quot;                     
- [5] &quot;Starbucks.per.million.inhabitants&quot;        &quot;Starbucks.per.10.sq..mile&quot;               
- [7] &quot;Median.Age&quot;                               &quot;Median.Household.Income&quot;                 
- [9] &quot;X2010.Population&quot;                         &quot;Percentage.of.white.population&quot;          
-[11] &quot;Land.Area..Sq..miles.&quot;                    &quot;Number.of.Starbucks..Rank.&quot;              
-[13] &quot;Starbucks.per.million.inhabitants..Rank.&quot; &quot;Starbucks.per.sq..mile..Rank.&quot;           
-[15] &quot;Median.Age..Rank.&quot;                        &quot;Median.Household.Income..Rank.&quot;          
-[17] &quot;Percentage.of.white.population..Rank.&quot;   </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhTdGFyYnVja3MpXG5cbiNhZGRpbmcgU3RhdGUgY29sdW1uXG5TdGFyYnVja3MgPC1cbiAgU3RhcmJ1Y2tzICU+JVxuICBtdXRhdGUoU3RhdGU9XCJDYWxpZm9ybmlhXCIpXG5gYGAifQ== -->
-<pre class="r"><code>View(Starbucks)
+names(Starbucks)
+View(Starbucks)
 
-#adding State column
+#adding the State column
 Starbucks &lt;-
   Starbucks %&gt;%
   mutate(State=&quot;California&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="research-question" class="section level3">
+<h3>Research Question</h3>
+<p>Is there a relationship between number of Starbucks and demographic characteristics of a city? * Factors that we are interested: <em>- Age </em>- Median Income <em>- Percentage </em>- Location</p>
+<!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpgYGAKCiMjIyBEYXRhIEludGFrZQoKYGBge3J9CiMjIyBMb2FkIHRoZSBkYXRhIHNldCBpbnRvIG91ciBSU3R1ZGlvIGVudmlyb25tZW50ClN0YXJidWNrcyA8LSByZWFkLmNzdigiU3RhcmJ1Y2tzaW5DYWxpZm9ybmlhQ2l0eVN0YXRzLmNzdiIpCgojY29tbWFuZHMgdXNlZCB0byBpbnNwZWN0IHRoZSBkYXRhIHNldApuYW1lcyhTdGFyYnVja3MpClZpZXcoU3RhcmJ1Y2tzKQoKI2FkZGluZyBTdGF0ZSBjb2x1bW4KU3RhcmJ1Y2tzIDwtCiAgU3RhcmJ1Y2tzICU+JQogIG11dGF0ZShTdGF0ZT0iQ2FsaWZvcm5pYSIpCmBgYA==</div>
+<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpgYGAKCiMjIyBEYXRhIEludGFrZQoKYGBge3J9CiMjIyBMb2FkIHRoZSBkYXRhIHNldCBpbnRvIG91ciBSU3R1ZGlvIGVudmlyb25tZW50ClN0YXJidWNrcyA8LSByZWFkLmNzdigiU3RhcmJ1Y2tzaW5DYWxpZm9ybmlhQ2l0eVN0YXRzLmNzdiIpCgojY29tbWFuZHMgdXNlZCB0byBpbnNwZWN0IHRoZSBkYXRhIHNldApuYW1lcyhTdGFyYnVja3MpClZpZXcoU3RhcmJ1Y2tzKQoKI2FkZGluZyB0aGUgU3RhdGUgY29sdW1uClN0YXJidWNrcyA8LQogIFN0YXJidWNrcyAlPiUKICBtdXRhdGUoU3RhdGU9IkNhbGlmb3JuaWEiKQpgYGAKCiMjIyBSZXNlYXJjaCBRdWVzdGlvbgpJcyB0aGVyZSBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIG51bWJlciBvZiBTdGFyYnVja3MgYW5kIGRlbW9ncmFwaGljIGNoYXJhY3RlcmlzdGljcyBvZiBhIGNpdHk/CiogRmFjdG9ycyB0aGF0IHdlIGFyZSBpbnRlcmVzdGVkOgoqLSBBZ2UKKi0gTWVkaWFuIEluY29tZQoqLSBQZXJjZW50YWdlCiotIExvY2F0aW9u</div>
 
 
 

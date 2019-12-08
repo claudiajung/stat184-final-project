@@ -31,8 +31,21 @@ Starbucks <- read.csv("StarbucksinCaliforniaCityStats.csv")
 names(Starbucks)
 View(Starbucks)
 
-#adding State column
+#adding the State column
 Starbucks <-
   Starbucks %>%
   mutate(State="California")
 ```
+
+### Research Question
+Is there a relationship between number of Starbucks and demographic characteristics of a city?
+
+Factors that we are interested:
+
+- Age
+
+- Median Income
+
+- Percentage
+
+- Location
