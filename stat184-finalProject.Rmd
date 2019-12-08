@@ -19,8 +19,6 @@ library(mosaic)
 library(tidyverse)
 library(lubridate)
 library(DataComputing)
-
-
 ```
 
 ### Data Intake
@@ -31,7 +29,10 @@ Starbucks <- read.csv("StarbucksinCaliforniaCityStats.csv")
 
 #commands used to inspect the data set
 names(Starbucks)
-summary(Starbucks)
-glimpse(Starbucks)
 View(Starbucks)
+
+#adding State column
+Starbucks <-
+  Starbucks %>%
+  mutate(State="California")
 ```

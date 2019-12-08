@@ -1486,7 +1486,7 @@ window.initializeCodeFolding = function(show) {
 
     // create a collapsable div to wrap the code in
     var div = $('<div class="collapse r-code-collapse"></div>');
-    if (show || $(this)[0].classList.contains('fold-show'))
+    if (show)
       div.addClass('in');
     var id = 'rcode-643E0F36' + currentIndex++;
     div.attr('id', id);
@@ -1616,6 +1616,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -1759,16 +1760,120 @@ summary {
 <h3>Clean up environment and load packages</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCBcbnJtKGxpc3QgPSBscygpKVxuXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWRcbmxpYnJhcnkobW9zYWljKVxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGx1YnJpZGF0ZSlcbmxpYnJhcnkoRGF0YUNvbXB1dGluZylcblxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCBcbnJtKGxpc3QgPSBscygpKVxuXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWRcbmxpYnJhcnkobW9zYWljKVxuYGBgIn0= -->
 <pre class="r"><code># clean up the RStudio environment 
 rm(list = ls())
 
 # load all packages here: `mosaic`, `tidyverse`, `lubridate`, and all others used
-library(mosaic)
-library(tidyverse)
-library(lubridate)
-library(DataComputing)
-</code></pre>
+library(mosaic)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBkcGx5clxuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2RwbHlyJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tXG4gIHByaW50LnJvd3dpc2VfZGYgICAgIFxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGxhdHRpY2VcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dmb3JtdWxhXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGdncGxvdDJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dzdGFuY2VcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmGdnc3RhbmNl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgZ2VvbV9lcnJvcmJhcmgsIEdlb21FcnJvcmJhcmhcblxuXG5OZXcgdG8gZ2dmb3JtdWxhPyAgVHJ5IHRoZSB0dXRvcmlhbHM6IFxuXHRsZWFybnI6OnJ1bl90dXRvcmlhbChcImludHJvZHVjdGlvblwiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcblx0bGVhcm5yOjpydW5fdHV0b3JpYWwoXCJyZWZpbmluZ1wiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogbW9zYWljRGF0YVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBNYXRyaXhcblJlZ2lzdGVyZWQgUzMgbWV0aG9kcyBvdmVyd3JpdHRlbiBieSAnaHRtbHRvb2xzJzpcbiAgbWV0aG9kICAgICAgICAgICAgICAgZnJvbSAgICAgICAgIFxuICBwcmludC5odG1sICAgICAgICAgICB0b29sczpyc3R1ZGlvXG4gIHByaW50LnNoaW55LnRhZyAgICAgIHRvb2xzOnJzdHVkaW9cbiAgcHJpbnQuc2hpbnkudGFnLmxpc3QgdG9vbHM6cnN0dWRpb1xuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2h0bWx3aWRnZXRzJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWx3aWRnZXQgdG9vbHM6cnN0dWRpb1xuUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ21vc2FpYyc6XG4gIG1ldGhvZCAgICAgICAgICAgICAgICAgICAgICAgICAgIGZyb20gICBcbiAgZm9ydGlmeS5TcGF0aWFsUG9seWdvbnNEYXRhRnJhbWUgZ2dwbG90MlxuXG5UaGUgJ21vc2FpYycgcGFja2FnZSBtYXNrcyBzZXZlcmFsIGZ1bmN0aW9ucyBmcm9tIGNvcmUgcGFja2FnZXMgaW4gb3JkZXIgdG8gYWRkIFxuYWRkaXRpb25hbCBmZWF0dXJlcy4gIFRoZSBvcmlnaW5hbCBiZWhhdmlvciBvZiB0aGVzZSBmdW5jdGlvbnMgc2hvdWxkIG5vdCBiZSBhZmZlY3RlZCBieSB0aGlzLlxuXG5Ob3RlOiBJZiB5b3UgdXNlIHRoZSBNYXRyaXggcGFja2FnZSwgYmUgc3VyZSB0byBsb2FkIGl0IEJFRk9SRSBsb2FkaW5nIG1vc2FpYy5cblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmG1vc2FpY+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOk1hdHJpeOKAmTpcblxuICAgIG1lYW5cblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgc3RhdFxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6ZHBseXLigJk6XG5cbiAgICBjb3VudCwgZG8sIHRhbGx5XG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpzdGF0c+KAmTpcblxuICAgIGJpbm9tLnRlc3QsIGNvciwgY29yLnRlc3QsIGNvdiwgZml2ZW51bSwgSVFSLCBtZWRpYW4sIHByb3AudGVzdCwgcXVhbnRpbGUsIHNkLFxuICAgIHQudGVzdCwgdmFyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgbWF4LCBtZWFuLCBtaW4sIHByb2QsIHJhbmdlLCBzYW1wbGUsIHN1bVxuIn0= -->
+<pre><code>Loading required package: dplyr
+Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: lattice
+Loading required package: ggformula
+Loading required package: ggplot2
+Loading required package: ggstance
+
+Attaching package: ‘ggstance’
+
+The following objects are masked from ‘package:ggplot2’:
+
+    geom_errorbarh, GeomErrorbarh
+
+
+New to ggformula?  Try the tutorials: 
+    learnr::run_tutorial(&quot;introduction&quot;, package = &quot;ggformula&quot;)
+    learnr::run_tutorial(&quot;refining&quot;, package = &quot;ggformula&quot;)
+Loading required package: mosaicData
+Loading required package: Matrix
+Registered S3 methods overwritten by 'htmltools':
+  method               from         
+  print.html           tools:rstudio
+  print.shiny.tag      tools:rstudio
+  print.shiny.tag.list tools:rstudio
+Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+Registered S3 method overwritten by 'mosaic':
+  method                           from   
+  fortify.SpatialPolygonsDataFrame ggplot2
+
+The 'mosaic' package masks several functions from core packages in order to add 
+additional features.  The original behavior of these functions should not be affected by this.
+
+Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
+
+Attaching package: ‘mosaic’
+
+The following object is masked from ‘package:Matrix’:
+
+    mean
+
+The following object is masked from ‘package:ggplot2’:
+
+    stat
+
+The following objects are masked from ‘package:dplyr’:
+
+    count, do, tally
+
+The following objects are masked from ‘package:stats’:
+
+    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test, quantile, sd,
+    t.test, var
+
+The following objects are masked from ‘package:base’:
+
+    max, mean, min, prod, range, sample, sum</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXHUwMDFiWzMwbeKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4yLjEg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzMwbVx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG10aWJibGUgXHUwMDFiWzMwbSAyLjEuMyAgICAgXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzBtIDAuMy4yXG5cdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXIgIFx1MDAxYlszMG0gMS4wLjAgICAgIFx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG1zdHJpbmdyXHUwMDFiWzMwbSAxLjQuMFxuXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXJlYWRyICBcdTAwMWJbMzBtIDEuMy4xICAgICBcdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtZm9yY2F0c1x1MDAxYlszMG0gMC40LjBcdTAwMWJbMzltXG5cdTAwMWJbMzBt4pSA4pSAIFx1MDAxYlsxbUNvbmZsaWN0c1x1MDAxYlsyMm0g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZV9jb25mbGljdHMoKSDilIDilIBcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY291bnQoKVx1MDAxYlszMG0gICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpjb3VudCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtcHVycnJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY3Jvc3MoKVx1MDAxYlszMG0gICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06OmNyb3NzKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZG8oKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpkbygpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZXhwYW5kKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bU1hdHJpeFx1MDAxYlszMG06OmV4cGFuZCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZmlsdGVyKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzMwbTo6ZmlsdGVyKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1nZ3N0YW5jZVx1MDAxYlszMG06Olx1MDAxYlszMm1nZW9tX2Vycm9yYmFyaCgpXHUwMDFiWzMwbSBtYXNrcyBcdTAwMWJbMzRtZ2dwbG90Mlx1MDAxYlszMG06Omdlb21fZXJyb3JiYXJoKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtc3RhdHNcdTAwMWJbMzBtOjpsYWcoKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bXRpZHlyXHUwMDFiWzMwbTo6XHUwMDFiWzMybXBhY2soKVx1MDAxYlszMG0gICAgICAgICAgICAgIG1hc2tzIFx1MDAxYlszNG1NYXRyaXhcdTAwMWJbMzBtOjpwYWNrKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtc3RhdCgpXHUwMDFiWzMwbSAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZ2dwbG90Mlx1MDAxYlszMG06OnN0YXQoKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06Olx1MDAxYlszMm10YWxseSgpXHUwMDFiWzMwbSAgICAgICAgICAgIG1hc2tzIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06OnRhbGx5KClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG10aWR5clx1MDAxYlszMG06Olx1MDAxYlszMm11bnBhY2soKVx1MDAxYlszMG0gICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtTWF0cml4XHUwMDFiWzMwbTo6dW5wYWNrKClcdTAwMWJbMzltXG4ifQ== -->
+<pre><code>[30m── [1mAttaching packages[22m ───────────────────────────────────────────────────── tidyverse 1.2.1 ──[39m
+[30m[32m✔[30m [34mtibble [30m 2.1.3     [32m✔[30m [34mpurrr  [30m 0.3.2
+[32m✔[30m [34mtidyr  [30m 1.0.0     [32m✔[30m [34mstringr[30m 1.4.0
+[32m✔[30m [34mreadr  [30m 1.3.1     [32m✔[30m [34mforcats[30m 0.4.0[39m
+[30m── [1mConflicts[22m ──────────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[30m [34mmosaic[30m::[32mcount()[30m            masks [34mdplyr[30m::count()
+[31m✖[30m [34mpurrr[30m::[32mcross()[30m             masks [34mmosaic[30m::cross()
+[31m✖[30m [34mmosaic[30m::[32mdo()[30m               masks [34mdplyr[30m::do()
+[31m✖[30m [34mtidyr[30m::[32mexpand()[30m            masks [34mMatrix[30m::expand()
+[31m✖[30m [34mdplyr[30m::[32mfilter()[30m            masks [34mstats[30m::filter()
+[31m✖[30m [34mggstance[30m::[32mgeom_errorbarh()[30m masks [34mggplot2[30m::geom_errorbarh()
+[31m✖[30m [34mdplyr[30m::[32mlag()[30m               masks [34mstats[30m::lag()
+[31m✖[30m [34mtidyr[30m::[32mpack()[30m              masks [34mMatrix[30m::pack()
+[31m✖[30m [34mmosaic[30m::[32mstat()[30m             masks [34mggplot2[30m::stat()
+[31m✖[30m [34mmosaic[30m::[32mtally()[30m            masks [34mdplyr[30m::tally()
+[31m✖[30m [34mtidyr[30m::[32munpack()[30m            masks [34mMatrix[30m::unpack()[39m</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
+<pre class="r"><code>library(lubridate)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
+<pre><code>
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShEYXRhQ29tcHV0aW5nKVxuYGBgIn0= -->
+<pre class="r"><code>library(DataComputing)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1784,126 +1889,30 @@ Starbucks &lt;- read.csv(&quot;StarbucksinCaliforniaCityStats.csv&quot;)
 #commands used to inspect the data set
 names(Starbucks)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIklEXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFsyXSBcIkNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFszXSBcIkNvdW50eVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs0XSBcIk51bWJlci5vZi5TdGFyYnVja3NcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50c1wiICAgICAgIFxuIFs2XSBcIlN0YXJidWNrcy5wZXIuMTAuc3EuLm1pbGVcIiAgICAgICAgICAgICAgIFxuIFs3XSBcIk1lZGlhbi5BZ2VcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs4XSBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lXCIgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDEwLlBvcHVsYXRpb25cIiAgICAgICAgICAgICAgICAgICAgICAgIFxuWzEwXSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvblwiICAgICAgICAgIFxuWzExXSBcIkxhbmQuQXJlYS4uU3EuLm1pbGVzLlwiICAgICAgICAgICAgICAgICAgIFxuWzEyXSBcIk51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuXCIgICAgICAgICAgICAgIFxuWzEzXSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cIlxuWzE0XSBcIlN0YXJidWNrcy5wZXIuc3EuLm1pbGUuLlJhbmsuXCIgICAgICAgICAgIFxuWzE1XSBcIk1lZGlhbi5BZ2UuLlJhbmsuXCIgICAgICAgICAgICAgICAgICAgICAgIFxuWzE2XSBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLlwiICAgICAgICAgIFxuWzE3XSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvbi4uUmFuay5cIiAgIFxuIn0= -->
-<pre><code> [1] &quot;ID&quot;                                      
- [2] &quot;City&quot;                                    
- [3] &quot;County&quot;                                  
- [4] &quot;Number.of.Starbucks&quot;                     
- [5] &quot;Starbucks.per.million.inhabitants&quot;       
- [6] &quot;Starbucks.per.10.sq..mile&quot;               
- [7] &quot;Median.Age&quot;                              
- [8] &quot;Median.Household.Income&quot;                 
- [9] &quot;X2010.Population&quot;                        
-[10] &quot;Percentage.of.white.population&quot;          
-[11] &quot;Land.Area..Sq..miles.&quot;                   
-[12] &quot;Number.of.Starbucks..Rank.&quot;              
-[13] &quot;Starbucks.per.million.inhabitants..Rank.&quot;
-[14] &quot;Starbucks.per.sq..mile..Rank.&quot;           
-[15] &quot;Median.Age..Rank.&quot;                       
-[16] &quot;Median.Household.Income..Rank.&quot;          
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIklEXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIkNpdHlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFszXSBcIkNvdW50eVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3NcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50c1wiICAgICAgICBcIlN0YXJidWNrcy5wZXIuMTAuc3EuLm1pbGVcIiAgICAgICAgICAgICAgIFxuIFs3XSBcIk1lZGlhbi5BZ2VcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lXCIgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDEwLlBvcHVsYXRpb25cIiAgICAgICAgICAgICAgICAgICAgICAgICBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvblwiICAgICAgICAgIFxuWzExXSBcIkxhbmQuQXJlYS4uU3EuLm1pbGVzLlwiICAgICAgICAgICAgICAgICAgICBcIk51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuXCIgICAgICAgICAgICAgIFxuWzEzXSBcIlN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cIiBcIlN0YXJidWNrcy5wZXIuc3EuLm1pbGUuLlJhbmsuXCIgICAgICAgICAgIFxuWzE1XSBcIk1lZGlhbi5BZ2UuLlJhbmsuXCIgICAgICAgICAgICAgICAgICAgICAgICBcIk1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLlwiICAgICAgICAgIFxuWzE3XSBcIlBlcmNlbnRhZ2Uub2Yud2hpdGUucG9wdWxhdGlvbi4uUmFuay5cIiAgIFxuIn0= -->
+<pre><code> [1] &quot;ID&quot;                                       &quot;City&quot;                                    
+ [3] &quot;County&quot;                                   &quot;Number.of.Starbucks&quot;                     
+ [5] &quot;Starbucks.per.million.inhabitants&quot;        &quot;Starbucks.per.10.sq..mile&quot;               
+ [7] &quot;Median.Age&quot;                               &quot;Median.Household.Income&quot;                 
+ [9] &quot;X2010.Population&quot;                         &quot;Percentage.of.white.population&quot;          
+[11] &quot;Land.Area..Sq..miles.&quot;                    &quot;Number.of.Starbucks..Rank.&quot;              
+[13] &quot;Starbucks.per.million.inhabitants..Rank.&quot; &quot;Starbucks.per.sq..mile..Rank.&quot;           
+[15] &quot;Median.Age..Rank.&quot;                        &quot;Median.Household.Income..Rank.&quot;          
 [17] &quot;Percentage.of.white.population..Rank.&quot;   </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShTdGFyYnVja3MpXG5gYGAifQ== -->
-<pre class="r"><code>summary(Starbucks)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSUQgICAgICAgICAgICAgICAgQ2l0eSAgICBcbiBBZGVsYW50byAtIFNhbiBCZXJuYXJkaW5vIENvdW50eSA6ICAxICAgQWRlbGFudG8gICAgOiAgMSAgXG4gQWdvdXJhIEhpbGxzIC0gTG9zIEFuZ2VsZXMgQ291bnR5OiAgMSAgIEFnb3VyYSBIaWxsczogIDEgIFxuIEFsYW1lZGEgLSBBbGFtZWRhIENvdW50eSAgICAgICAgIDogIDEgICBBbGFtZWRhICAgICA6ICAxICBcbiBBbGFtbyAtIENvbnRyYSBDb3N0YSBDb3VudHkgICAgICA6ICAxICAgQWxhbW8gICAgICAgOiAgMSAgXG4gQWxiYW55IC0gQWxhbWVkYSBDb3VudHkgICAgICAgICAgOiAgMSAgIEFsYmFueSAgICAgIDogIDEgIFxuIEFsaGFtYnJhIC0gTG9zIEFuZ2VsZXMgQ291bnR5ICAgIDogIDEgICBBbGhhbWJyYSAgICA6ICAxICBcbiAoT3RoZXIpICAgICAgICAgICAgICAgICAgICAgICAgICA6NDI3ICAgKE90aGVyKSAgICAgOjQyNyAgXG4gICAgICAgICAgICAgICAgICAgQ291bnR5ICAgIE51bWJlci5vZi5TdGFyYnVja3NcbiBMb3MgQW5nZWxlcyBDb3VudHkgICA6IDgxICAgTWluLiAgIDogIDEuMDAwICAgIFxuIE9yYW5nZSBDb3VudHkgICAgICAgIDogMzMgICAxc3QgUXUuOiAgMS4wMDAgICAgXG4gUml2ZXJzaWRlIENvdW50eSAgICAgOiAyOCAgIE1lZGlhbiA6ICAzLjAwMCAgICBcbiBTYW4gRGllZ28gQ291bnR5ICAgICA6IDI0ICAgTWVhbiAgIDogIDUuOTA4ICAgIFxuIFNhbiBCZXJuYXJkaW5vIENvdW50eTogMjMgICAzcmQgUXUuOiAgNi4wMDAgICAgXG4gQ29udHJhIENvc3RhIENvdW50eSAgOiAyMiAgIE1heC4gICA6MjIxLjAwMCAgICBcbiAoT3RoZXIpICAgICAgICAgICAgICA6MjIyICAgICAgICAgICAgICAgICAgICAgIFxuIFN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cyBTdGFyYnVja3MucGVyLjEwLnNxLi5taWxlICAgTWVkaWFuLkFnZSBcbiA3MiAgICAgOiAgNyAgICAgICAgICAgICAgICAgICAgICAgMC45NiAgIDogIDQgICAgICAgICAgICAgICAzMi41ICAgOiAgNyAgXG4gODcgICAgIDogIDcgICAgICAgICAgICAgICAgICAgICAgIDQuMjcgICA6ICA0ICAgICAgICAgICAgICAgMzYuMiAgIDogIDcgIFxuIDEwNyAgICA6ICA2ICAgICAgICAgICAgICAgICAgICAgICAxLjE3ICAgOiAgMyAgICAgICAgICAgICAgIDM1LjYgICA6ICA2ICBcbiAxMTcgICAgOiAgNiAgICAgICAgICAgICAgICAgICAgICAgMS40NCAgIDogIDMgICAgICAgICAgICAgICAzNyAgICAgOiAgNiAgXG4gNDcgICAgIDogIDYgICAgICAgICAgICAgICAgICAgICAgIDEuODEgICA6ICAzICAgICAgICAgICAgICAgMzcuOSAgIDogIDYgIFxuIDQ0ICAgICA6ICA1ICAgICAgICAgICAgICAgICAgICAgICAyLjEyICAgOiAgMyAgICAgICAgICAgICAgIDI4LjYgICA6ICA1ICBcbiAoT3RoZXIpOjM5NiAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKTo0MTMgICAgICAgICAgICAgICAoT3RoZXIpOjM5NiAgXG4gIE1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lICAgICAgWDIwMTAuUG9wdWxhdGlvblxuICQ0NiwyNTAgICAgICA6ICAyICAgICAgICAxMTkyNiAgICAgICAgOiAgMiAgICBcbiAkNTgsNzA2ICAgICAgOiAgMiAgICAgICAgTm90IEF2YWlsYWJsZTogIDIgICAgXG4gJDYzLDc1MCAgICAgIDogIDIgICAgICAgIDEwMDA5NyAgICAgICA6ICAxICAgIFxuIE5vdCBBdmFpbGFibGU6ICAyICAgICAgICAxMDA4MCAgICAgICAgOiAgMSAgICBcbiAkMTAwLDM3MyAgICAgOiAgMSAgICAgICAgMTAxMTIzICAgICAgIDogIDEgICAgXG4gJDEwMCw0MTcgICAgIDogIDEgICAgICAgIDEwMjM0ICAgICAgICA6ICAxICAgIFxuIChPdGhlcikgICAgICA6NDIzICAgICAgICAoT3RoZXIpICAgICAgOjQyNSAgICBcbiBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24gTGFuZC5BcmVhLi5TcS4ubWlsZXMuXG4gNzUgICAgIDogMTQgICAgICAgICAgICAgICAgICAgIDExLjA4ICA6ICAzICAgICAgICAgIFxuIDg2ICAgICA6IDEzICAgICAgICAgICAgICAgICAgICA3LjkzICAgOiAgMyAgICAgICAgICBcbiA2MCAgICAgOiAxMiAgICAgICAgICAgICAgICAgICAgMS44NSAgIDogIDIgICAgICAgICAgXG4gNjUgICAgIDogMTIgICAgICAgICAgICAgICAgICAgIDEuOTEgICA6ICAyICAgICAgICAgIFxuIDcxICAgICA6IDEyICAgICAgICAgICAgICAgICAgICAxMi4xMyAgOiAgMiAgICAgICAgICBcbiA4NyAgICAgOiAxMiAgICAgICAgICAgICAgICAgICAgMTcuNzMgIDogIDIgICAgICAgICAgXG4gKE90aGVyKTozNTggICAgICAgICAgICAgICAgICAgIChPdGhlcik6NDE5ICAgICAgICAgIFxuIE51bWJlci5vZi5TdGFyYnVja3MuLlJhbmsuIFN0YXJidWNrcy5wZXIubWlsbGlvbi5pbmhhYml0YW50cy4uUmFuay5cbiBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gMXN0IFF1LjogIDEuMCAgICAgICAgICAgICAgMXN0IFF1LjoxMDguNSAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1lZGlhbiA6MTkwLjAgICAgICAgICAgICAgIE1lZGlhbiA6MjE2LjAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBNZWFuICAgOjE4OC4yICAgICAgICAgICAgICBNZWFuICAgOjIxNi4wICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gM3JkIFF1LjozMDkuMCAgICAgICAgICAgICAgM3JkIFF1LjozMjMuNSAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6NDMzLjAgICAgICAgICAgICAgIE1heC4gICA6NDMxLjAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gU3RhcmJ1Y2tzLnBlci5zcS4ubWlsZS4uUmFuay4gTWVkaWFuLkFnZS4uUmFuay5cbiBNaW4uICAgOiAgMS4wICAgICAgICAgICAgICAgICBNaW4uICAgOiAgMSAgICAgIFxuIDFzdCBRdS46MTA4LjUgICAgICAgICAgICAgICAgIDFzdCBRdS46MTA3ICAgICAgXG4gTWVkaWFuIDoyMTYuMCAgICAgICAgICAgICAgICAgTWVkaWFuIDoyMTYgICAgICBcbiBNZWFuICAgOjIxNS45ICAgICAgICAgICAgICAgICBNZWFuICAgOjIxNSAgICAgIFxuIDNyZCBRdS46MzIzLjUgICAgICAgICAgICAgICAgIDNyZCBRdS46MzIyICAgICAgXG4gTWF4LiAgIDo0MzEuMCAgICAgICAgICAgICAgICAgTWF4LiAgIDo0MzEgICAgICBcbiBOQSdzICAgOjIgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjIgICAgICAgIFxuIE1lZGlhbi5Ib3VzZWhvbGQuSW5jb21lLi5SYW5rLiBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24uLlJhbmsuXG4gTWluLiAgIDogIDEuMCAgICAgICAgICAgICAgICAgIE1pbi4gICA6ICAxLjAgICAgICAgICAgICAgICAgICAgICAgICBcbiAxc3QgUXUuOjEwOC41ICAgICAgICAgICAgICAgICAgMXN0IFF1LjoxMDguNSAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1lZGlhbiA6MjE2LjAgICAgICAgICAgICAgICAgICBNZWRpYW4gOjIxNi4wICAgICAgICAgICAgICAgICAgICAgICAgXG4gTWVhbiAgIDoyMTYuMCAgICAgICAgICAgICAgICAgIE1lYW4gICA6MjE2LjAgICAgICAgICAgICAgICAgICAgICAgICBcbiAzcmQgUXUuOjMyMy41ICAgICAgICAgICAgICAgICAgM3JkIFF1LjozMjMuNSAgICAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6NDMxLjAgICAgICAgICAgICAgICAgICBNYXguICAgOjQzMS4wICAgICAgICAgICAgICAgICAgICAgICAgXG4gTkEncyAgIDoyICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6MiAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiJ9 -->
-<pre><code>                                 ID                City    
- Adelanto - San Bernardino County :  1   Adelanto    :  1  
- Agoura Hills - Los Angeles County:  1   Agoura Hills:  1  
- Alameda - Alameda County         :  1   Alameda     :  1  
- Alamo - Contra Costa County      :  1   Alamo       :  1  
- Albany - Alameda County          :  1   Albany      :  1  
- Alhambra - Los Angeles County    :  1   Alhambra    :  1  
- (Other)                          :427   (Other)     :427  
-                   County    Number.of.Starbucks
- Los Angeles County   : 81   Min.   :  1.000    
- Orange County        : 33   1st Qu.:  1.000    
- Riverside County     : 28   Median :  3.000    
- San Diego County     : 24   Mean   :  5.908    
- San Bernardino County: 23   3rd Qu.:  6.000    
- Contra Costa County  : 22   Max.   :221.000    
- (Other)              :222                      
- Starbucks.per.million.inhabitants Starbucks.per.10.sq..mile   Median.Age 
- 72     :  7                       0.96   :  4               32.5   :  7  
- 87     :  7                       4.27   :  4               36.2   :  7  
- 107    :  6                       1.17   :  3               35.6   :  6  
- 117    :  6                       1.44   :  3               37     :  6  
- 47     :  6                       1.81   :  3               37.9   :  6  
- 44     :  5                       2.12   :  3               28.6   :  5  
- (Other):396                       (Other):413               (Other):396  
-  Median.Household.Income      X2010.Population
- $46,250      :  2        11926        :  2    
- $58,706      :  2        Not Available:  2    
- $63,750      :  2        100097       :  1    
- Not Available:  2        10080        :  1    
- $100,373     :  1        101123       :  1    
- $100,417     :  1        10234        :  1    
- (Other)      :423        (Other)      :425    
- Percentage.of.white.population Land.Area..Sq..miles.
- 75     : 14                    11.08  :  3          
- 86     : 13                    7.93   :  3          
- 60     : 12                    1.85   :  2          
- 65     : 12                    1.91   :  2          
- 71     : 12                    12.13  :  2          
- 87     : 12                    17.73  :  2          
- (Other):358                    (Other):419          
- Number.of.Starbucks..Rank. Starbucks.per.million.inhabitants..Rank.
- Min.   :  1.0              Min.   :  1.0                           
- 1st Qu.:  1.0              1st Qu.:108.5                           
- Median :190.0              Median :216.0                           
- Mean   :188.2              Mean   :216.0                           
- 3rd Qu.:309.0              3rd Qu.:323.5                           
- Max.   :433.0              Max.   :431.0                           
-                            NA's   :2                               
- Starbucks.per.sq..mile..Rank. Median.Age..Rank.
- Min.   :  1.0                 Min.   :  1      
- 1st Qu.:108.5                 1st Qu.:107      
- Median :216.0                 Median :216      
- Mean   :215.9                 Mean   :215      
- 3rd Qu.:323.5                 3rd Qu.:322      
- Max.   :431.0                 Max.   :431      
- NA's   :2                     NA's   :2        
- Median.Household.Income..Rank. Percentage.of.white.population..Rank.
- Min.   :  1.0                  Min.   :  1.0                        
- 1st Qu.:108.5                  1st Qu.:108.5                        
- Median :216.0                  Median :216.0                        
- Mean   :216.0                  Mean   :216.0                        
- 3rd Qu.:323.5                  3rd Qu.:323.5                        
- Max.   :431.0                  Max.   :431.0                        
- NA's   :2                      NA's   :2                            </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2xpbXBzZShTdGFyYnVja3MpXG5gYGAifQ== -->
-<pre class="r"><code>glimpse(Starbucks)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiA0MzNcblZhcmlhYmxlczogMTdcbiQgSUQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBNb250ZXJleSBQYXJrIC0gTG9zIEFuZ2XigKZcbiQgQ2l0eSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBNb250ZXJleSBQYXJrLCBNaWxwaXRhcyzigKZcbiQgQ291bnR5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBMb3MgQW5nZWxlcyBDb3VudHksIFNhbnTigKZcbiQgTnVtYmVyLm9mLlN0YXJidWNrcyAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGludD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxLCAxMCwgMywgMiwgNCwgMywgMywgNSzigKZcbiQgU3RhcmJ1Y2tzLnBlci5taWxsaW9uLmluaGFiaXRhbnRzICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxNywgMTUwLCA1NiwgODMsIDgyLCAyNyzigKZcbiQgU3RhcmJ1Y2tzLnBlci4xMC5zcS4ubWlsZSAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxLjMwLCA3LjM2LCA1LjgxLCAzLjIyLCDigKZcbiQgTWVkaWFuLkFnZSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSA0My4xLCAzNi4xLCAzOC4xLCAzOSwgNDTigKZcbiQgTWVkaWFuLkhvdXNlaG9sZC5JbmNvbWUgICAgICAgICAgICAgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSBcIiQ1MSw3MzZcIiwgXCIkOTQsNTg5XCIsIFwiJOKAplxuJCBYMjAxMC5Qb3B1bGF0aW9uICAgICAgICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDYwMjY5LCA2Njc5MCwgNTM3NjQsIDI0MOKAplxuJCBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24gICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDE5LCAyMSwgMjEsIDIyLCAyMywgMjMsIOKAplxuJCBMYW5kLkFyZWEuLlNxLi5taWxlcy4gICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDcuNjcsIDEzLjU5LCA1LjE2LCA2LjIxLOKAplxuJCBOdW1iZXIub2YuU3RhcmJ1Y2tzLi5SYW5rLiAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDM3NiwgMTkwLCAxMTMsIDI0NywgMeKAplxuJCBTdGFyYnVja3MucGVyLm1pbGxpb24uaW5oYWJpdGFudHMuLlJhbmsuIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDMzNCwgOTYsIDE4MywgMTc3LCAxNeKAplxuJCBTdGFyYnVja3MucGVyLnNxLi5taWxlLi5SYW5rLiAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDY4LCAzODAsIDM1MCwgMjEwLCAzMDQsIOKAplxuJCBNZWRpYW4uQWdlLi5SYW5rLiAgICAgICAgICAgICAgICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDM2NCwgMjA1LCAyNTgsIDI3NywgMzc0LOKAplxuJCBNZWRpYW4uSG91c2Vob2xkLkluY29tZS4uUmFuay4gICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEyNSwgMzc0LCA5MywgMzczLCAzNTgsIOKAplxuJCBQZXJjZW50YWdlLm9mLndoaXRlLnBvcHVsYXRpb24uLlJhbmsuICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08aW50Plx1MDAxYlszOW1cdTAwMWJbMjNtIDEsIDIsIDMsIDQsIDUsIDYsIDcsIDgsIOKAplxuIn0= -->
-<pre><code>Observations: 433
-Variables: 17
-$ ID                                       [3m[38;5;246m&lt;fct&gt;[39m[23m Monterey Park - Los Ange…
-$ City                                     [3m[38;5;246m&lt;fct&gt;[39m[23m Monterey Park, Milpitas,…
-$ County                                   [3m[38;5;246m&lt;fct&gt;[39m[23m Los Angeles County, Sant…
-$ Number.of.Starbucks                      [3m[38;5;246m&lt;int&gt;[39m[23m 1, 10, 3, 2, 4, 3, 3, 5,…
-$ Starbucks.per.million.inhabitants        [3m[38;5;246m&lt;fct&gt;[39m[23m 17, 150, 56, 83, 82, 27,…
-$ Starbucks.per.10.sq..mile                [3m[38;5;246m&lt;fct&gt;[39m[23m 1.30, 7.36, 5.81, 3.22, …
-$ Median.Age                               [3m[38;5;246m&lt;fct&gt;[39m[23m 43.1, 36.1, 38.1, 39, 44…
-$ Median.Household.Income                  [3m[38;5;246m&lt;fct&gt;[39m[23m &quot;$51,736&quot;, &quot;$94,589&quot;, &quot;$…
-$ X2010.Population                         [3m[38;5;246m&lt;fct&gt;[39m[23m 60269, 66790, 53764, 240…
-$ Percentage.of.white.population           [3m[38;5;246m&lt;fct&gt;[39m[23m 19, 21, 21, 22, 23, 23, …
-$ Land.Area..Sq..miles.                    [3m[38;5;246m&lt;fct&gt;[39m[23m 7.67, 13.59, 5.16, 6.21,…
-$ Number.of.Starbucks..Rank.               [3m[38;5;246m&lt;int&gt;[39m[23m 1, 376, 190, 113, 247, 1…
-$ Starbucks.per.million.inhabitants..Rank. [3m[38;5;246m&lt;int&gt;[39m[23m 1, 334, 96, 183, 177, 15…
-$ Starbucks.per.sq..mile..Rank.            [3m[38;5;246m&lt;int&gt;[39m[23m 68, 380, 350, 210, 304, …
-$ Median.Age..Rank.                        [3m[38;5;246m&lt;int&gt;[39m[23m 364, 205, 258, 277, 374,…
-$ Median.Household.Income..Rank.           [3m[38;5;246m&lt;int&gt;[39m[23m 125, 374, 93, 373, 358, …
-$ Percentage.of.white.population..Rank.    [3m[38;5;246m&lt;int&gt;[39m[23m 1, 2, 3, 4, 5, 6, 7, 8, …</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhTdGFyYnVja3MpXG5gYGAifQ== -->
-<pre class="r"><code>View(Starbucks)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhTdGFyYnVja3MpXG5cbiNhZGRpbmcgU3RhdGUgY29sdW1uXG5TdGFyYnVja3MgPC1cbiAgU3RhcmJ1Y2tzICU+JVxuICBtdXRhdGUoU3RhdGU9XCJDYWxpZm9ybmlhXCIpXG5gYGAifQ== -->
+<pre class="r"><code>View(Starbucks)
+
+#adding State column
+Starbucks &lt;-
+  Starbucks %&gt;%
+  mutate(State=&quot;California&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQoKCmBgYAoKIyMjIERhdGEgSW50YWtlCgpgYGB7cn0KIyMjIExvYWQgdGhlIGRhdGEgc2V0IGludG8gb3VyIFJTdHVkaW8gZW52aXJvbm1lbnQKU3RhcmJ1Y2tzIDwtIHJlYWQuY3N2KCJTdGFyYnVja3NpbkNhbGlmb3JuaWFDaXR5U3RhdHMuY3N2IikKCiNjb21tYW5kcyB1c2VkIHRvIGluc3BlY3QgdGhlIGRhdGEgc2V0Cm5hbWVzKFN0YXJidWNrcykKc3VtbWFyeShTdGFyYnVja3MpCmdsaW1wc2UoU3RhcmJ1Y2tzKQpWaWV3KFN0YXJidWNrcykKYGBg</div>
+<div id="rmd-source-code">Ci0tLQp0aXRsZTogIlNUQVQgMTg0IEZpbmFsIFByb2plY3QiCmF1dGhvcjogIkJlcm5pY2UgQ2hlbiAmIENsYXVkaWEgSnVuZyIKZGF0ZTogIkRlY2VtYmVyIDE3LCAyMDE5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBTZXQgVXAKCiMjIyBDbGVhbiB1cCBlbnZpcm9ubWVudCBhbmQgbG9hZCBwYWNrYWdlcwpgYGB7cn0KIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCAKcm0obGlzdCA9IGxzKCkpCgojIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IGBtb3NhaWNgLCBgdGlkeXZlcnNlYCwgYGx1YnJpZGF0ZWAsIGFuZCBhbGwgb3RoZXJzIHVzZWQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpgYGAKCiMjIyBEYXRhIEludGFrZQoKYGBge3J9CiMjIyBMb2FkIHRoZSBkYXRhIHNldCBpbnRvIG91ciBSU3R1ZGlvIGVudmlyb25tZW50ClN0YXJidWNrcyA8LSByZWFkLmNzdigiU3RhcmJ1Y2tzaW5DYWxpZm9ybmlhQ2l0eVN0YXRzLmNzdiIpCgojY29tbWFuZHMgdXNlZCB0byBpbnNwZWN0IHRoZSBkYXRhIHNldApuYW1lcyhTdGFyYnVja3MpClZpZXcoU3RhcmJ1Y2tzKQoKI2FkZGluZyBTdGF0ZSBjb2x1bW4KU3RhcmJ1Y2tzIDwtCiAgU3RhcmJ1Y2tzICU+JQogIG11dGF0ZShTdGF0ZT0iQ2FsaWZvcm5pYSIpCmBgYA==</div>
 
 
 
