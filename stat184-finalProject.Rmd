@@ -104,12 +104,29 @@ Starbucks %>%
 data("ZipGeography")
 View(ZipGeography)
 
+GroupByCity <-
+  ZipGeography %>%
+  group_by(CityName) %>%
+  mutate(totalPopulation=sum(Population, na.rm=TRUE)) %>%
+  distinct(CityName, .keep_all=TRUE) %>%
+  select(CityName, State, totalPopulation)
+
+GroupByCity
+
 JointTable <-
   Starbucks %>%
-  inner_join(ZipGeography, by=c("City"="CityName", "State"="State"))
+  inner_join(GroupByCity, by=c("City"="CityName", "State"="State"))
+
+Top10TotalPop <-
+  JointTable %>%
+  arrange(-totalPopulation) %>%
+  select(City, Number.of.Starbucks, totalPopulation) %>%
+  head(10)
+
+Top10TotalPop
 
 JointTable %>%
-  ggplot(aes(x=Population, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50)
+  ggplot(aes(x=totalPopulation, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50) + xlim(0, 500000)
 ```
 
 * divide into income groups (low, middle, high)
