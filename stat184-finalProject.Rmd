@@ -20,6 +20,7 @@ library(tidyverse)
 library(lubridate)
 library(DataComputing)
 library(ggplot2)
+library(party)
 ```
 
 ### Data Intake
@@ -94,7 +95,7 @@ Starbucks %>%
   ggplot(aes(x=Percentage.of.white.population, y=Number.of.Starbucks)) + geom_point() +ylim(0,50)
 ```
 
-Top 10
+### Top 10 and Population
 ```{r}
 Starbucks %>%
   arrange(-Number.of.Starbucks) %>%
@@ -128,6 +129,29 @@ Top10TotalPop
 JointTable %>%
   ggplot(aes(x=totalPopulation, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50) + xlim(0, 500000)
 ```
+### Regression Model - Seeing if factors are significant
+```{r}
+lmStarbucks <- lm(Number.of.Starbucks ~ Median.Age + Median.Household.Income + Percentage.of.white.population
+                  + totalPopulation, data=JointTable)
+summary(lmStarbucks)
+```
+### Machine Learning - Predicting number of Starbucks/probability of opening a new Starbucks in a particular city
 
-* divide into income groups (low, middle, high)
-* calculate percentage of starbucks in those income groups.
+```{r}
+#Predicting probability of a starbucks 
+data("NCHS")
+
+LeftJointTable <-
+  GroupByCity %>%
+  left_join(Starbucks, by=c("CityName"="City", "State"="State")) %>%
+  filter(State=="California") %>%
+  select(Number.of.Starbucks, Median.Age, Percentage.of.white.population, Median.Household.Income, totalPopulation)
+
+LeftJointTable %>%
+  arrange(Number.of.Starbucks)
+
+mod1 <- party::ctree(
+  Number.of.Starbucks ~ totalPopulation,
+  data=JointTable)
+plot(mod1, type="simple")
+```
