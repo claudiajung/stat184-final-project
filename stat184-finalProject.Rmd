@@ -151,7 +151,7 @@ LeftJointTable %>%
   arrange(Number.of.Starbucks)
 
 mod1 <- party::ctree(
-  Number.of.Starbucks ~ totalPopulation,
+  Number.of.Starbucks ~ Median.Age + Median.Household.Income + Percentage.of.white.population + totalPopulation,
   data=JointTable)
 plot(mod1, type="simple")
 ```
