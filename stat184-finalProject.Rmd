@@ -135,11 +135,9 @@ lmStarbucks <- lm(Number.of.Starbucks ~ Median.Age + Median.Household.Income + P
                   + totalPopulation, data=JointTable)
 summary(lmStarbucks)
 ```
-### Machine Learning - Predicting number of Starbucks/probability of opening a new Starbucks in a particular city
+### Machine Learning 
 
 ```{r}
-#Predicting probability of a starbucks 
-data("NCHS")
 
 LeftJointTable <-
   GroupByCity %>%
