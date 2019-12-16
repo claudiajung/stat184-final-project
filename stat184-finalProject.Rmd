@@ -155,3 +155,4 @@ mod1 <- party::ctree(
   data=JointTable)
 plot(mod1, type="simple")
 ```
+
