@@ -135,9 +135,11 @@ lmStarbucks <- lm(Number.of.Starbucks ~ Median.Age + Median.Household.Income + P
                   + totalPopulation, data=JointTable)
 summary(lmStarbucks)
 ```
+
 ### Machine Learning 
 
 ```{r}
+
 
 LeftJointTable <-
   GroupByCity %>%
