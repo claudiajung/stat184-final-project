@@ -129,12 +129,6 @@ Top10TotalPop
 JointTable %>%
   ggplot(aes(x=totalPopulation, y=Number.of.Starbucks)) + geom_point() + ylim(0, 50) + xlim(0, 500000)
 ```
-### Regression Model - Seeing if factors are significant
-```{r}
-lmStarbucks <- lm(Number.of.Starbucks ~ Median.Age + Median.Household.Income + Percentage.of.white.population
-                  + totalPopulation, data=JointTable)
-summary(lmStarbucks)
-```
 
 ### Machine Learning 
 
@@ -153,7 +147,7 @@ mod1 <- party::ctree(
   data=JointTable)
 plot(mod1, type="simple")
 ```
-## Final Comments:
-# We can see that there are more Starbucks in cities with younger median age (around 25-40 years old). We don't really see correlations between the number of Starbucks and median household income or percentage of white population. There is a positive correlation between number of Starbucks and the total population in that city; which means that cities with larger populations have more Starbucks. (more people -> more customers -> higher demand -> more profit)
+#### Final Comments:
+#### We can see that there are more Starbucks in cities with younger median age (around 25-40 years old). We don't really see correlations between the number of Starbucks and median household income or percentage of white population. 
 
 # The decision tree shown has the output Number.of.Starbucks and inputs of Median.Age, Median.Household.Income, Percentage.of.white.population , and totalPopulation. These inputs were the four factors that we were interested in. 
