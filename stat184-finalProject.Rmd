@@ -147,7 +147,7 @@ mod1 <- party::ctree(
   data=JointTable)
 plot(mod1, type="simple")
 ```
-## Final Comments:
-# We can see that there are more Starbucks in cities with younger median age (around 25-40 years old). We don't really see correlations between the number of Starbucks and median household income or percentage of white population. 
+#### Final Comments:
+#### We can see that there are more Starbucks in cities with younger median age (around 25-40 years old). We don't really see correlations between the number of Starbucks and median household income or percentage of white population. 
 
 # The decision tree shown has the output Number.of.Starbucks and inputs of Median.Age, Median.Household.Income, Percentage.of.white.population , and totalPopulation. These inputs were the four factors that we were interested in. 
