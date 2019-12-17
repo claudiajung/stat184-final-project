@@ -51,7 +51,7 @@ Factors that we are interested:
 
 - Percentage of White population
 
-- Location
+- Total Population
 
 ### Analysis- Age
 
@@ -139,8 +139,6 @@ summary(lmStarbucks)
 ### Machine Learning 
 
 ```{r}
-
-
 LeftJointTable <-
   GroupByCity %>%
   left_join(Starbucks, by=c("CityName"="City", "State"="State")) %>%
